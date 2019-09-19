@@ -1,6 +1,7 @@
 @negro: black;
 @aside: #e3f2fd;
 @gris: #f0f0f0;
+@blanco: #fff;
 @azul: #262638;
 @amarillo: #ffc401;
 
@@ -11,9 +12,24 @@ body{
 p{
     color: @negro;
 }
-aside{
-    background: @aside;
-}
+
+#sidebar {
+    width: 250px;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: @blanco;
+    .active{
+        color: #f0f0f0;
+    }
+    .nav-link{
+        display: inline;
+    }
+    a{
+        color: @negro;
+    }
+  }
 
 img{
     &.logo{
