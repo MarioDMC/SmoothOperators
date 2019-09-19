@@ -114,10 +114,6 @@
 	</section>
         </div>
     </section>
-
-    
-
-
     <footer>
         <p> <i class="fas fa-user-lock"></i> Sistema desarrollado por La Logia Corp.</p>
     </footer>
