@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <title>Sistema de Apartado Cañones</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
@@ -40,20 +43,84 @@
         </div>
     </nav>
     <section>
-        <aside>
-        <nav>
-            <ul>
-                <li>Usuarios</li>
-            </ul>
-        </nav>
-        </aside>
+        <div class="sidebar" id="sidebar">
+            <nav>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item list-group-item-action active">
+                        <i class="fas fa-list-ul"></i><a class="nav-link active" href="#">Apartados</a>
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                        <i class="fas fa-user-friends"></i><a class="nav-link" href="#">Usuarios</a>
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                        <i class="fas fa-sliders-h"></i><a class="nav-link" href="#">Configuración</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <div id="contenedor-principal"></div>
     </section>
+<table class="tabla">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Hora de Inicio</th>
+      <th scope="col">Hora de Finalización</th>
+      <th scope="col">Salón</th>
+      <th scope="col">Materia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Daniel</td>
+      <td>16/09/2019</td>
+      <td>02:00 pm</td>
+      <td>04:30 pm</td>
+      <td>302</td>
+      <td>Programación Orientada a Objetos</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Mario</td>
+      <td>18/09/2019</td>
+      <td>03:10 pm</td>
+      <td>06:45 pm</td>
+      <td>102</td>
+      <td>Sistemas ERP</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Karen</td>
+      <td>15/09/2019</td>
+      <td>10:20 am</td>
+      <td>01:40 pm</td>
+      <td>201</td>
+      <td>Redes</td>
+    </tr>
+    <tr>
+        <th scope="row">4</th>
+        <td>Diana</td>
+      <td>10/09/2019</td>
+      <td>09:10 am</td>
+      <td>11:22 am</td>
+      <td>101</td>
+      <td>Desarrollo Orientado a Objetos</td>
+    </tr>
+  </tbody>
+</table>
     <footer>
-    <p> <i class="fas fa-user-lock"></i> Sistema desarrollado por La Logia Corp.</p>
+        <p> <i class="fas fa-user-lock"></i> Sistema desarrollado por La Logia Corp.</p>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.10.2/js/all.js" data-auto-replace-svg="nest"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
