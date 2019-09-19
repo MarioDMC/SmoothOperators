@@ -56,7 +56,6 @@
         </aside>
         <div id="contenedor-principal"></div>
     </section>
-
 <table class="tabla">
   <thead class="thead-dark">
     <tr>
