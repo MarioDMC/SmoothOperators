@@ -56,6 +56,57 @@
         </aside>
         <div id="contenedor-principal"></div>
     </section>
+<table class="tabla">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Hora de Inicio</th>
+      <th scope="col">Hora de Finalización</th>
+      <th scope="col">Salón</th>
+      <th scope="col">Materia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Daniel</td>
+      <td>16/09/2019</td>
+      <td>02:00 pm</td>
+      <td>04:30 pm</td>
+      <td>302</td>
+      <td>Programación Orientada a Objetos</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Mario</td>
+      <td>18/09/2019</td>
+      <td>03:10 pm</td>
+      <td>06:45 pm</td>
+      <td>102</td>
+      <td>Sistemas ERP</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Karen</td>
+      <td>15/09/2019</td>
+      <td>10:20 am</td>
+      <td>01:40 pm</td>
+      <td>201</td>
+      <td>Redes</td>
+    </tr>
+    <tr>
+        <th scope="row">4</th>
+        <td>Diana</td>
+      <td>10/09/2019</td>
+      <td>09:10 am</td>
+      <td>11:22 am</td>
+      <td>101</td>
+      <td>Desarrollo Orientado a Objetos</td>
+    </tr>
+  </tbody>
+</table>
     <footer>
     <p> <i class="fas fa-user-lock"></i> Sistema desarrollado por La Logia Corp.</p>
     </footer>
