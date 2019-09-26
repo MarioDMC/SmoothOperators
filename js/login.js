@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  $("#btn-login").click(function() {
+  $("#btn-login").click(function(e) {
+    e.preventDefault();
       let obj = {
         "accion": "login"
       };
@@ -12,13 +13,13 @@ $(document).ready(function() {
     $.post("includes/funciones.php", obj, function(respuesta){
 
         if(respuesta.status == 0){
-          alert("Usuario incorrecto")
+          alert("Usuario incorrecto");
         }
         else if(respuesta.status == 2){
-          alert("Contraseña incorrecta")
+          alert("Contraseña incorrecta");
         }
         else{
-          window.location.replace("index.php")
+          window.location.replace("index.php");
         }
 
     }, "JSON");
