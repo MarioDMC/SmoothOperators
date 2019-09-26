@@ -1,3 +1,7 @@
+<?php 
+if (!isset($_SESSION["nombre"])) {
+  
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +18,7 @@
     <img class="mb-4 logo" src="img/logo-unid.png" alt="">
     <h1 class="h3 mb-3 font-weight-normal">Ingresar</h1>
     <label for="inputEmail" class="sr-only">Correo Electronico</label>
-    <input name="usuario" type="email" id="inputEmail" class="form-control" placeholder="Correo Electronico" required autofocus>
+    <input name="usuario" type="text" id="inputEmail" class="form-control" placeholder="Correo Electronico" required autofocus>
     <label namefor="inputPassword" class="sr-only">Contraseña</label>
     <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
     <div class="checkbox mb-3">
@@ -31,3 +35,10 @@
 </body>
 
 </html>
+
+<?php 
+} else{
+  header("location:index.php");
+}
+
+ ?>

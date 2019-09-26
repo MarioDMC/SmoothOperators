@@ -12,13 +12,13 @@ $(document).ready(function() {
     $.post("includes/funciones.php", obj, function(respuesta){
 
         if(respuesta.status == 0){
-          alert("Usuario incorrecto")
+          alert("Usuario incorrecto");
         }
         else if(respuesta.status == 2){
-          alert("Contraseña incorrecta")
+          alert("Contraseña incorrecta");
         }
-        else{
-          window.location.replace("index.php")
+        else {
+          window.location.replace("index.php");
         }
 
     }, "JSON");

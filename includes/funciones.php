@@ -6,7 +6,7 @@ if($_POST){
     switch($_POST['accion']) {
         case 'login': login();
         break;
-        default;
+        default:
         break;
     }
 }
