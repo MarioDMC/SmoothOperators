@@ -14,20 +14,30 @@ if($_POST){
 function login(){
     global $db;
     $respuesta = [];
-    $usuario = $db->count("usuarios", "*", ["correo" => $_POST['usuario']]);
-    if($usuario > 0){
-        $respuesta["texto"] = "Si existe";
-        $respuesta["status"] = 1;
-        //validar que la contraseña se correcta, 
-        //Si la contraseña no es correcta enviar un status 0, con e texto que ustedes quieran
-        //Si la contraseña es correcta entonces 
-        //1 inicar sesion
-        //2 Settear a la variabe de $_SESSION los valores: nombre, caorreo, status, id y nivel
-        //Responde status 1
+    $usuario = $db->get("usuarios", "*", ["correo" => $_POST['usuario']]);
+    
+    if($usuario){
+
+        if($db->get("usuarios","*", ["AND" => ["correo" => $_POST['usuario'], "password"=> $_POST['password']]])){
+
+            session_start();
+            $respuesta["texto"] = "Si existe";
+            $_SESSION['id'] = $usuario["id"];
+            $_SESSION['nombre'] = $usuario["nombre"];
+            $_SESSION['email'] = $usuario["correo"];
+            $_SESSION['status'] = $usuario["status"];
+            $_SESSION['nivel'] = $usuario["nivel"];
+            $respuesta["status"] = 1;
+            
+        }else{
+                $respuesta["texto"] = "Contraseña incorrecta";
+                $respuesta["status"] = 2;
+            }
     }else{
         $respuesta["texto"] = "No existe";
         $respuesta["status"] = 0;
     }
+
     echo json_encode($respuesta);
 }
 ?>
