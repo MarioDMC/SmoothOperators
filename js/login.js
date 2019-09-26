@@ -4,14 +4,23 @@ $(document).ready(function() {
         "accion": "login"
       };
     $("form").find("input").map(function(i, e){
-        obj =[$(this).prop("name")] = $(this).val();
+        obj[$(this).prop("name")] = $(this).val();
         if($(this).prop("type") == "checkbox"){
-            obj =[$(this).prop("name")] = $(this).prop("checked");
+            obj[$(this).prop("name")] = $(this).prop("checked");
         }
     });
-    $.post("../includes/funciones.php", obj, function(respuesta){
-        // Si el status es 0, enviar mensaje de datos incorrectos, intente de nuevo
-        // Si el stauts es 1, redireccionar al index
+    $.post("includes/funciones.php", obj, function(respuesta){
+
+        if(respuesta.status == 0){
+          alert("Usuario incorrecto")
+        }
+        else if(respuesta.status == 2){
+          alert("Contraseña incorrecta")
+        }
+        else{
+          window.location.replace("index.php")
+        }
+
     }, "JSON");
   });
 });
