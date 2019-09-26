@@ -1,6 +1,12 @@
 <!-- Si la sesion existe, mostrar la página
      Si la sesion no existe, redireccionar a login
  -->
+ <?php
+  session_start();
+  error_reporting(0);
+  $varsesion = $_SESSION['usuario'];
+  if (isset($varsesion)){
+  ?>
 <?php 
 require_once '../../includes/funciones.php';
 ?>
@@ -120,4 +126,10 @@ require_once '../../includes/funciones.php';
         crossorigin="anonymous"></script>
 </body>
 
-</html>4
+</html>
+<?php
+ }
+  else 
+  {
+header("Location: ../../login.php");
+  }
