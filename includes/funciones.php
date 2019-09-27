@@ -25,13 +25,12 @@ function login(){
                 error_reporting(0);
                 $respuesta["texto"] = "Si existe";
                 $respuesta["status"] = 1;
-                // print_r($usuario);
-                // $_SESSION['id_session'] = $usuario["id"];
                 $_SESSION['id'] = $usuario["id"];
                 $_SESSION['nombre'] = $usuario["nombre"];
                 $_SESSION['correo'] = $usuario["correo"];
                 $_SESSION['status'] = $usuario["status"];
                 $_SESSION['nivel'] = $usuario["nivel"];
+                
             } else {
                 $respuesta["texto"] = "Contraseña incorrecta";
                 $respuesta["status"] = 2;

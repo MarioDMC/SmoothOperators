@@ -1,14 +1,12 @@
 <?php
     require_once 'includes/funciones.php';
     session_start();
-  error_reporting(0);
-  $varsesion = $_SESSION['correo'];
-  if (isset($varsesion)){
+    error_reporting(0);
+    $varsesion = $_SESSION['correo'];
+    if (isset($varsesion)){
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,7 +118,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
 <?php
  } else {
