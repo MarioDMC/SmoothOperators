@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  error_reporting(0);
+  $varsesion = $_SESSION['correo'];
+  if (!$varsesion){
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,3 +37,8 @@
 </body>
 
 </html>
+<?php
+ } else {
+    header("location: index.php");
+  }
+?>
