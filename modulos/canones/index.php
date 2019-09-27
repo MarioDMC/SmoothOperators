@@ -1,9 +1,5 @@
-<?php
-    require_once 'includes/funciones.php';
-    session_start();
-  error_reporting(0);
-  $varsesion = $_SESSION['correo'];
-  if (isset($varsesion)){
+<?php 
+require_once '../../includes/funciones.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <title>Sistema de Apartado Cañones</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="../../css/estilo.css">
 </head>
 
 <body>
@@ -71,34 +67,19 @@
 		<table class="table">
 		  <thead class="thead-dark">
 		    <tr>
-		      <th scope="col">Matrícula</th>
+		      <th scope="col">ID</th>
 		      <th scope="col">Nombre</th>
-		      <th scope="col">Teléfono</th>
-		      <th scope="col">Correo Electrónico</th>
-		      <th scope="col">Nivel</th>
+		      <th scope="col">Estatus</th>
 		    </tr>
 		  </thead>
 		  <tbody>
           <?php
-            //Cuando se consultan varios registros se utiliza select
-            //$usuarios = $db->select("usuarios", "*", [
-            //    "AND" => [
-            //        "usr_estatus" => 1,
-            //        "usr_nivel" => 2
-            //        ]
-            //    ]);
-            // Se utiliza get cuando solo es un registro exclusivo
-            $row = $db->get("usuarios", "*", ["usr_id" => 6] );
-            //foreach ($usuarios as $usuario => $row) {
+            $row = $db->get("canones", "*");
           ?>
                 <tr>
-                    <td><?php echo $row['matricula']; ?></td>
+                    <td><?php echo $row['id']; ?></td>
                     <td><?php echo $row['nombre']; ?></td>
-                    <td><?php echo $row['telefono']; ?></td>
-                    <td><?php echo $row['correo']; ?></td>
-                    <td><?php echo $row['nivel']; ?></td>
                     <td><?php echo $row['status']; ?></td>
-                    <td><?php echo $row['password']; ?></td>
                 </tr>
             <?php
             //}
@@ -112,15 +93,12 @@
         <p> <i class="fas fa-user-lock"></i> Sistema desarrollado por La Logia Corp.</p>
     </footer>
     <script src="https://use.fontawesome.com/releases/v5.10.2/js/all.js" data-auto-replace-svg="nest"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
 
 </html>
-<?php
- } else {
-    header("location: login.php");
-  }
-?>

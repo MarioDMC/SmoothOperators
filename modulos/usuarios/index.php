@@ -1,7 +1,12 @@
 <!-- Si la sesion existe, mostrar la página
      Si la sesion no existe, redireccionar a login
  -->
-<?php 
+ <?php
+  error_reporting(0);
+  $varsesion = $_SESSION['correo'];
+  if (isset($varsesion)){
+  ?>
+<?php
 require_once '../../includes/funciones.php';
 ?>
 <!DOCTYPE html>
@@ -112,12 +117,14 @@ require_once '../../includes/funciones.php';
         <p> <i class="fas fa-user-lock"></i> Sistema desarrollado por La Logia Corp.</p>
     </footer>
     <script src="https://use.fontawesome.com/releases/v5.10.2/js/all.js" data-auto-replace-svg="nest"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
 
-</html>4
+</html>
+<?php
+ }else {
+header("Location: ../../login.php");
+  }
