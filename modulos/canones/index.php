@@ -1,5 +1,10 @@
-<?php 
-require_once '../../includes/funciones.php';
+ <?php
+    require_once '../../includes/funciones.php';
+    session_start();
+    error_reporting(0);
+    $varsesion = $_SESSION['correo'];
+    if (isset($varsesion))
+    {
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +64,9 @@ require_once '../../includes/funciones.php';
                     <li class="list-group-item list-group-item-action">
                         <i class="fas fa-sliders-h"></i><a class="nav-link" href="#">Configuración</a>
                     </li>
+                    <li class="list-group-item list-group-item-action">
+                        <i class="fas fa-sign-out-alt"></i><a class="nav-link" href="../../cerrarsesion.php">Cerrar Sesión</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -102,3 +110,9 @@ require_once '../../includes/funciones.php';
 </body>
 
 </html>
+<?php
+}else 
+    {
+        header("Location: ../../login.php");
+    }
+?>
