@@ -59,7 +59,10 @@
                         <i class="fas fa-user-friends"></i><a class="nav-link active" href="#">Usuarios</a>
                     </li>
                     <li class="list-group-item list-group-item-action">
-                        <i class="fas fa-sign-out-alt"></i><a class="nav-link" href="#">Configuración</a>
+                        <i class="fas fa-sliders-h"></i><a class="nav-link" href="#">Configuración</a>
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                        <i class="fas fa-sign-out-alt"></i><a class="nav-link" href="../../cerrarsesion.php">Cerrar Sesión</a>
                     </li>
                 </ul>
             </nav>

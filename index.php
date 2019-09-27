@@ -56,7 +56,7 @@
                         <i class="fas fa-list-ul"></i><a class="nav-link active" href="#">Apartados</a>
                     </li>
                     <li class="list-group-item list-group-item-action">
-                        <i class="fas fa-user-friends"></i><a class="nav-link" href="#">Usuarios</a>
+                        <i class="fas fa-user-friends"></i><a class="nav-link" href="modulos/usuarios/index.php">Usuarios</a>
                     </li>
                     <li class="list-group-item list-group-item-action">
                         <i class="fas fa-sliders-h"></i><a class="nav-link" href="#">Configuración</a>
@@ -67,7 +67,7 @@
                 </ul>
             </nav>
         </div>
-        <div class="container" id="contenedor-principal">
+        <div class="container" id="contenedor-principal-first-index">
         	<section>
 		<table class="table">
 		  <thead class="thead-dark">
