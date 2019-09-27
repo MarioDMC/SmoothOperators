@@ -45,7 +45,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">@</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1" disabled>
+                        <input type="text" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1" value="<?php echo $_SESSION["nombre"]; ?>" disabled>
                     </div>
                 </form>
         </div>
@@ -62,6 +62,9 @@
                     </li>
                     <li class="list-group-item list-group-item-action">
                         <i class="fas fa-sliders-h"></i><a class="nav-link" href="#">Configuración</a>
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                        <i class="fas fa-sign-out-alt"></i><a class="nav-link" href="cerrarsesion.php">Cerrar Sesión</a>
                     </li>
                 </ul>
             </nav>
