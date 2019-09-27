@@ -1,18 +1,13 @@
-<!-- Si la sesion existe, mostrar la página
-     Si la sesion no existe, redireccionar a login
- -->
  <?php
-  session_start();
-  error_reporting(0);
-  $varsesion = $_SESSION['correo'];
-  if (isset($varsesion)){
-  ?>
-<?php
-require_once '../../includes/funciones.php';
+    require_once '../../includes/funciones.php';
+    session_start();
+    error_reporting(0);
+    $varsesion = $_SESSION['correo'];
+    if (isset($varsesion))
+    {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,11 +17,10 @@ require_once '../../includes/funciones.php';
     <title>Sistema de Apartado Cañones</title>
     <link rel="stylesheet" href="../../css/estilo.css">
 </head>
-
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
-                <img src="../img/logo.svg" width="30" height="30" alt="">
+                <img src="../../img/logo.svg" width="30" height="30" alt="">
             </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -123,9 +117,10 @@ require_once '../../includes/funciones.php';
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
 <?php
- }else {
-header("Location: ../../login.php");
-  }
+}else 
+    {
+        header("Location: ../../login.php");
+    }
+?>
